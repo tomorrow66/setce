@@ -1,0 +1,87 @@
+ul.subnav {
+	position: absolute;
+	z-index: 3;
+	width: 210px;
+	margin-top: 8px;
+	background-color: rgb(67, 66, 66);
+	text-align: left;
+	top: 25px;
+	left: 0px;
+
+}
+
+ul.subnav li {
+	font-size: 1.2em;
+	line-height: 1.8em;
+	padding-left: 10px;
+	background-color: transparent;
+
+}
+
+ul.subnav li:hover {
+	background-color: #009ADB;
+}
+
+.hiring-and-welcoming ul {
+	width: 260px;
+}
+
+.general-info a:hover, .general-info a  {
+	padding-left: 15px;
+	border-top-left-radius: 8px 8px;
+}
+
+.general-info ul {
+	left: 0px;
+}
+
+
+.listening ul {
+	width: 280px;
+}
+
+.thanking ul {
+	width: 290px;
+}
+
+.developing ul {
+}
+
+.caring ul {
+}
+
+.celebrating ul {
+	width: 270px;
+}
+
+.sharing ul {
+	width: 190px;
+}
+
+.optional-question ul {
+	width: 200px;
+}
+
+.optional-question a:hover, .optional-question a {
+	padding-right: 19px;
+	position: relative;
+	left: 4px;
+	border-top-right-radius: 8px 8px;
+}
+
+div.tree {
+	position: relative;
+	float: right;
+	width: 20%;
+}
+
+ul.touch li h3 {
+	display: inline;
+	margin-left: 240px;
+	width: 200px;
+}
+
+li a.prevlink.drklink {
+	position: relative;
+	top: -40px;
+}

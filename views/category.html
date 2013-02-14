@@ -1,0 +1,24 @@
+<div class="lolight">
+	<div class="negmargin">
+		<section class="container banner">
+			<img src="/img/<%= @category.url %>/banner.jpg" alt="header_img_placeholder" width="960" height="210" />
+		</section>
+		<section class="container pitch">
+			<div class="intro">
+				<p><%= @category.description %></p>
+				<!-- <p><a href="" class="drklink">> Here's why.</a></p> -->
+			</div>
+		</section>
+	</div>
+</div>
+<div class="subcategories container">
+	<h2 class="catname"><%= @category.name %></h2>
+	<ul class="touch">
+		<% subs = @category.subcategories.sort { |a,b| a.position <=> b.position} %>
+		<% subs.each do |sub| %>
+			<li class="link" data-url="/category/<%= @category.url + '/' + sub.url %>"><div><img src="/img/<%= @category.url + '/' + sub.url + '.png' %>" /></div><p><!--[if IE]><br /><![endif]--><a href="/category/<%= @category.url + '/' + sub.url %>"><%= sub.name.upcase %></a></p></li>
+		<% end %>
+	</ul>
+
+</div>
+

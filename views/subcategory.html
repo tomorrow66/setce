@@ -1,0 +1,60 @@
+
+<div class="lolight">
+	<div class="negmargin">
+		<section class="container banner">
+			<img src="/img/<%= @cat.url + '/' + @sub.url %>/banner.jpg" alt="header_img_placeholder" width="960" height="210" />
+		</section>
+		<section class="container pitch">
+			<div class="intro">
+				<%= @sub.description ? "<p>#{@sub.description}</p>" : "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea...</p>" %>
+			</div>
+		</section>
+	</div>
+</div>
+
+<div class="assets container">
+	<h2 class="inline warning"><%= @sub.name %></h2>
+	<div class="tree" >
+		<span class="right">
+		<h4 class="txtcenter warning">YOU ARE LOCATED</h4>
+		<ul class="unstyled">
+			<% @categories.each do |cat| %>
+			  <li class=""><a href="/category/<%= cat.url %>" class="black <%= 'underline' if cat.name == @cat.name  %>"><%= cat.name %></a>
+				<% if cat.name == @cat.name %>
+					<ul class="unstyled">
+						<% subs = @cat.subcategories.sort { |a,b| a.position <=> b.position} %>
+						<% subs.each do |sub| %>
+							<% if sub.tree then %>
+								<%= sub.name == @sub.name ? "<li><a href='/category/#{@cat.url}/#{@sub.url}' class='drklink'>#{sub.tree}</a></li>" : "<li><a href='/category/#{@cat.url}/#{sub.url}' class='blue'>#{sub.tree}</a></li>" %>
+							<% else %>
+								<%= sub.name == @sub.name ? "<li><a href='/category/#{@cat.url}/#{@sub.url}' class='drklink'>#{sub.name}</a></li>" : "<li><a href='/category/#{@cat.url}/#{sub.url}' class='blue'>#{sub.name}</a></li>" %>
+							<% end %>
+						<% end %>
+					</ul>
+				<% end %>
+			  </li>
+			<% end %>
+		</ul>
+		</span>
+	</div>
+	
+	<ul class="touch">
+		<% @sub.assets.each do |a| %>
+			<li>
+			<!--[if lte IE 7]>
+				<h3 style="display: inline;"><%= a.name.truncate(5) %></h3>
+			<![endif]-->
+			<%= a.url ? "<a href='#{a.url}' class='prevlink drklink' rel='prettyPhoto' alt='IMAGE'><img src='/img/#{@cat.url}/#{@sub.url}/thumbs/#{a.thumb}' /><br /><span>(CLICK TO PREVIEW)</span></a>" : "<a href='/preview/#{@cat.url}/#{@sub.url}/#{a.id}?iframe=true&width=100%&height=100%' class='prevlink drklink' rel='prettyPhoto' alt='IMAGE'><img src='/img/#{@cat.url}/#{@sub.url}/thumbs/#{a.thumb}' /><br /><span>(CLICK TO PREVIEW)</span></a>" %>
+			<!--[if gte IE 8]>
+				<h3><%= a.name %></h3>
+			<![endif]-->
+			<!--[if !IE]><!-->
+				<h3><%= a.name %></h3>
+			<!--<![endif]-->
+				<% if a.download %>
+					<br /><a href="/download/<%= 'img/' + @cat.url + '/' + @sub.url + '/assets/' + a.download %>" class="download drklink">CLICK TO DOWNLOAD FILE</a>
+				<% end %>
+			</li>
+		<% end %>
+	</ul>
+</div>

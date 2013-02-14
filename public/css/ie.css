@@ -1,0 +1,39 @@
+nav {
+}
+
+div.negmargin {
+	margin-top: -20px;
+}
+
+div.lolight {
+	margin-top: 44px;
+}
+
+
+div.categories {
+	margin-top: 44px;
+}
+
+.category { 
+	margin-top: 44px;
+}
+
+section.category {
+	border-bottom: 1px solid #dedede;
+}
+
+section.category:last-child { 
+	border-bottom: 0px;
+}
+
+.lolight {
+	padding-top: 44px;
+}
+
+div.assets ul.touch {
+	border-right: 1px solid #dedede;
+}
+
+div.assets ul.touch {
+	border-bottom: 1px solid #dedede;
+}

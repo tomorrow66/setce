@@ -1,0 +1,47 @@
+<div class="lolight">
+	<div class="negmargin">
+		<section class="container banner">
+			<img src="/img/header_img_placeholder.jpg" alt="header_img_placeholder" width="960" height="210" />
+		</section>
+		<section class="container pitch">
+			<div class="intro">
+				<h2>Welcome to Children's!</h2>
+				<p>This website supports the application for Children’s Healthcare of Atlanta to be considered one of the “100 Best Companies to Work For.” We invite you to view the content on this site to see examples of materials that showcase the uniqueness of our employees and the programs we have in place to support them.</p>
+				<!-- <p><a href="" class="drklink">> Here's why.</a></p> -->
+			</div>
+		</section>
+	</div>
+</div>
+<div class="categories">
+	<% count = 0 %>
+	<% @categories.each do |cat| %>
+		<% count =  count + 1 %>
+		<% unless count.even? %>
+			<section class="category">
+				<div class="container">
+					<div class="left half catimg">
+						<a href="/category/<%= cat.url %>"class="" ><img src="/img/home/<%= cat.thumb %>" alt="img_nurse_placeholder" /></a>
+					</div>
+					<div class="right half copy">
+						<a href="/category/<%= cat.url %>"class="right arrowbtn" ></a>
+						<h2><%= cat.name %></h2>
+						<p><%= cat.description ? cat.description.truncate(33) : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation..." %></p>
+					</div>
+				</div>
+			</section>
+		<% else %>
+			<section class="category">
+				<div class="container">
+					<div class="left half copy">
+						<!--<a href="/category/<%= cat.url %>"class="right arrowbtn" ></a>-->
+						<h2><%= cat.name %></h2>
+						<p class="leftcopy"><%= cat.description ? cat.description.truncate(33) : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation..." %></p>
+					</div>
+					<div class="right half catimg">
+						<a href="/category/<%= cat.url %>"class="" ><img src="/img/home/<%= cat.thumb %>" alt="img_nurse_placeholder" /></a>
+					</div>
+				</div>
+			</section>
+		<% end %>
+	<% end %>
+</div>

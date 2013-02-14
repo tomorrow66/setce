@@ -1,0 +1,6 @@
+<div class="center txcenter" >
+	<% image = '/img/' + @cat + '/' + @sub + '/assets/' + @file.preview %>
+	<% url = "http://setce.com" + image %>
+	<% query = FastImage.size url %>
+	<img src="<%= image %>" style="display: block; margin-left: auto; margin-right: auto; <%= 'width: 100%;' if query.at(1) > 2000 %> "  />
+</div>

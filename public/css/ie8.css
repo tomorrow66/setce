@@ -1,0 +1,146 @@
+body{
+	width: 100%;
+	font-family: 'Questrial', sans-serif;
+	font-size: 1.4em;
+	line-height: 2.2em;
+	background-color: #f1f1f1;
+}
+
+div.lolight {
+	width: 100%;
+	padding: 0;
+}
+
+div.negmargin {
+	margin: 0 auto 0px auto;
+	width: 960px;	
+	line-height: 1.8em;
+}
+
+div.negmargin h2 {
+	line-height: 1.7em;
+}
+
+div.categories section.category div.container {
+	height: 179px;
+}
+
+h1 {
+	font-size: 2.2em;
+}
+
+h2, h3 {
+	font-family: 'Coustard', serif;
+	font-size: 1.8em;
+	font-weight: 400;
+	line-height: 2.7em;
+	color: #009ADB;
+}
+
+h3{
+	font-size: 1.6em;
+	line-height: 2.4em;
+}
+
+div.right.half.copy h2, div.left.half.copy h2 {
+	margin-top: 0;
+	line-height: 2.2em; 
+}
+
+nav {
+	width: 100%;
+	font-size: .8em;
+	line-height: 1.2em;
+	background-color: #434242;
+	padding: 10px 0;
+	position: relative;
+	top: 20px;
+	z-index: 2; 
+}
+
+nav a {
+}
+
+ul.subnav {
+	position: absolute;
+	z-index: 3;
+	width: 210px;
+	margin-top: 8px;
+	background-color: rgb(67, 66, 66);
+	text-align: left;
+}
+
+ul.subnav li {
+	font-size: 1.2em;
+	line-height: 1.8em;
+	padding-left: 10px;
+	background-color: transparent;
+
+}
+
+ul.subnav li:hover {
+	background-color: #009ADB;
+}
+
+.hiring-and-welcoming ul {
+	margin-left: 117px;
+	width: 260px;
+}
+
+.general-info a:hover, .general-info a  {
+	padding-left: 15px;
+	margin-left: -4px;
+	border-top-left-radius: 8px 8px;
+}
+
+.general-info ul {
+	margin-left: 30px;
+}
+
+.inspiring ul {
+	margin-left: 250px;
+}
+
+.speaking ul {
+	margin-left: 317px;
+}
+
+.listening ul {
+	margin-left: 388px;
+	width: 280px;
+}
+
+.thanking ul {
+	margin-left: 456px;
+	width: 290px;
+}
+
+.developing ul {
+	margin-left: 526px;
+}
+
+.caring ul {
+	margin-left: 605px;
+}
+
+.celebrating ul {
+	margin-left: 663px;
+	width: 270px;
+}
+
+.sharing ul {
+	margin-left: 746px;
+	width: 190px;
+}
+
+.optional-question ul {
+	margin-left: 761px;
+	width: 200px;
+}
+
+.optional-question a:hover, .optional-question a {
+	padding-right: 19px;
+	position: relative;
+	left: 4px;
+	border-top-right-radius: 8px 8px;
+}
