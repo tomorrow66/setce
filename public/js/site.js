@@ -13,9 +13,11 @@ jQuery(function()
 	
 
 	
+/*
 	$(".mainnav").mouseover(function(){
 	      	$(this).children('ul').css("display", "block");
 	    }).mouseout(function(){
 	     		$(this).children('ul').css("display", "none");
 	    });
+*/
 });
