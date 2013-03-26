@@ -1,7 +1,7 @@
 configure :development do
 
   # Shows DataMapper queries alongside page requests:
-  DataMapper::Logger.new $stdout, :debug
+  # DataMapper::Logger.new $stdout, :debug
 
   # Memory
   # DataMapper.setup :default, 'sqlite::memory:'

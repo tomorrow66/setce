@@ -1,14 +1,14 @@
 ['/index/?', '/?', '/home/?', '/index.html/?', '/home.html/?'].each do |path|
   get path do
     @categories = Category.all
-    view 'index'
+    erb :index
   end
 end
 
 get '/category/:id/?' do
   @categories = Category.all 
   @category = Category.first(url: params[:id])
-  view 'category'
+  erb :category
 end
 
 get '/category/:id/:sub/?' do 
@@ -20,7 +20,7 @@ get '/category/:id/:sub/?' do
     @sub = Subcategory.first(url: params[:sub], category_id: @cat.id)
   end
   @path = 'sub'
-  view 'subcategory'
+  erb :subcategory
 end
 
 get '/download/?' do
@@ -41,9 +41,9 @@ get '/preview/:cat/:sub/:id/?' do
   @cat = params[:cat]
   @sub = params[:sub]
   @file = Asset.get(params[:id])
-  view 'preview', layout: false
+  erb :preview, layout: false
 end
 
 get '/test/?' do
-  view 'test', layout: false
+  erb :test, layout: false
 end
